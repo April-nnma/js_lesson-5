@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js-lesson5</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Kết quả tuyển sinh</h1>
+      <label for="standard-score">Điểm chuẩn:</label>
+      <input type="number" id="standard-score" class="input-field" />
+      <label for="subject1-score">Điểm môn 1:</label>
+      <input type="number" id="subject1-score" class="input-field" />
+      <label for="subject2-score">Điểm môn 2:</label>
+      <input type="number" id="subject2-score" class="input-field" />
+      <label for="subject3-score">Điểm môn 3:</label>
+      <input type="number" id="subject3-score" class="input-field" />
+      <label for="region-select">Khu vực:</label>
+      <select id="region-select" class="input-field">
+        <option value="X">Không thuộc khu vực ưu tiên</option>
+        <option value="A">Khu vực A</option>
+        <option value="B">Khu vực B</option>
+        <option value="C">Khu vực C</option>
+      </select>
+      <label for="target-select">Đối tượng:</label>
+      <select id="target-select" class="input-field">
+        <option value="0">Không thuộc đối tượng ưu tiên</option>
+        <option value="1">Đối tượng 1</option>
+        <option value="2">Đối tượng 2</option>
+        <option value="3">Đối tượng 3</option>
+      </select>
+      <button onclick="checkResult()" class="check-btn">Kiểm tra kết quả</button>
+      <p id="result-message" class="result-message" style="display: none;"></p>
+      <p id="total-score" class="total-score" style="display: none;"></p>
+    </div>
+    </div>
+      </div>
+    </div>
+    <hr>
+    <div class="container">
+      <h1>Tính tiền điện</h1>
+      <label for="name">Tên khách hàng:</label>
+      <input type="text" id="name"><br>
+      <label for="kWh">Số kWh tiêu thụ:</label>
+      <input type="number" id="kWh"><br>
+      <button id="calculateBtn">Tính tiền</button>
+      <div id="result"></div>
+    </div>
+    <hr>
+    <div class="container">
+      <h1>Tính thuế thu nhập cá nhân</h1>
+      <label for="fullname">Họ và tên:</label>
+      <input type="text" id="fullname"><br>
+      <label for="income">Tổng thu nhập năm:</label>
+      <input type="number" id="income"><br>
+      <label for="dependents">Số người phụ thuộc:</label>
+      <input type="number" id="dependents"><br>
+      <button onclick="calculateTax()">Tính thuế</button><br>
+      <div id="ketqua"></div>
+    </div>
+    <hr>
+    <div class="container">
+      <h1>Tính hóa đơn khách hàng</h1>
+      <div class="form-group">
+        <label for="customer-code">Mã khách hàng:</label>
+        <input type="text" id="customer-code">
+      </div>
+      <div class="form-group">
+        <label for="customer-type">Loại khách hàng:</label>
+        <select id="customer-type" onchange="handleCustomerTypeChange()">
+          <option value="individual">Nhà dân</option>
+          <option value="business">Doanh nghiệp</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="connections-input" id="connections-label" class="hidden">Số kết nối:</label>
+        <input type="number" id="connections" class="hidden">
+      </div>
+      <div class="form-group">
+        <label for="premium-channels">Số kênh cao cấp:</label>
+        <input type="number" id="premium-channels">
+      </div>
+      <button onclick="calculateBills()">Tính hóa đơn</button>
+      <div id="bill-result"></div></div>
+    <script src="/main.js"></script>
+  </body>
+</html>
